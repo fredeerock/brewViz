@@ -1,10 +1,21 @@
 var app = require('express')();
-var http = require('http').Server(app);
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+var serveStatic = require('serve-static');
 
-app.get('/', function(req, res){
-  res.send('<h1>Hello worlds</h1>');
+server.listen(3000);
+
+app.use(serveStatic('public'));
+
+io.on('connection', function (socket) {
+  // socket.emit('news', { hello: 'world', h:34, s:23, l:12 });
+  socket.on('my other event', function (data) { console.log(data); });
+  setInterval(function() { socket.emit('news', {q:getRandomInt(0, 113), h:getRandomInt(0, 360), s:getRandomInt(0, 100), l:getRandomInt(0, 100)}) }, 3000);  
 });
 
-http.listen(3000, function(){
-  console.log('listening on *:3000');
-});
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
+
