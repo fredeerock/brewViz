@@ -1,3 +1,5 @@
+//pull upvoted quotes here
+
 var result;
 var compass;
 function preload() {
