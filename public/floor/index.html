@@ -13,15 +13,17 @@
     }
   </style>
   <script>
-    var q = 0;
+    var quoteNumber = 0;
+    var quotePhrase = 0;
     var h = 0;
     var s = 0;
     var l = 25;
     var x = 0;
     var y = 0;
     var socket = io.connect('http://localhost:3000');
-    socket.on('news', function (data) {
-      q = data.q;
+    socket.on('triggerPhrase', function (data) {
+      quotePhrase = data.quotePhrase;
+      quoteNumber = data.quoteNumber;
       h = data.h;
       s = data.s;
       l = data.l;

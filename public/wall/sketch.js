@@ -17,7 +17,8 @@ function setup() {
 
 function draw() {
   background(h, s, l);  
-  image(compass, x, y);
+  image(compass, windowWidth, windowHeight, 1000, 1000);
+  //rotate this
 
 }
 
