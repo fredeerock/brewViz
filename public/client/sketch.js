@@ -1,6 +1,6 @@
-var result;
+var quotes;
 function preload() {
-  result = loadStrings('../data/brew_quotes.txt');
+  quotes = loadStrings('../data/brew_quotes.txt');
 }
 
 function setup() {
@@ -18,7 +18,7 @@ function draw() {
  
   textSize(24); 
   fill(200);
-  text(result[q], windowWidth/2, windowHeight/2, windowWidth/2, windowHeight/2);
+  text(quotes[quoteNumber], windowWidth/2, windowHeight/2, windowWidth/2, windowHeight/2);
 
 }
 

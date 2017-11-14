@@ -17,35 +17,54 @@
       src: url(../data/VAG-Rounded-Std-Thin.ttf);
     }
 
+    @font-face {
+      font-family: VAG-Rounded-Std-Black;
+      src: url(../data/VAG-Rounded-Std-Black.ttf);
+    }
+
+    @font-face {
+      font-family: VAG-Rounded-Std-Bold;
+      src: url(../data/VAG-Rounded-Std-Bold.ttf);
+    }
+
     * {
       margin: 0;
       padding: 0;
     }
 
     .ad {
-      /* display: flex;
-      align-items: center;
-      justify-content: center; */
-      /* height: 100px; */
-      /* margin: auto; */
       position: absolute;
-      /* top: 0; */
-      left: 1vh;
+      /* left: 1vh; */
       bottom: 0;
-      /* right: 0; */
       font-family: VAG-Rounded-Std-Thin;
-      font-size: 4vh;
+      font-size: 3.5vh;
       color: white;
+      background-color: black;
+      padding: 15px;
     }
 
-    .ad span{
-      background-color: black;
+    .ad span {
+      font-family: VAG-Rounded-Std-Bold;
+      text-decoration: underline;
+      /* background-color: black;
       border-color: black;
-      padding-top: 20px;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-top: 15px;
+      padding-left: 15px;
+      padding-right: 15px; */
+    }
+    
+    #quote{
+      position: absolute;
+      top: 7vw;
+      left: 5vw;
+      right: 5vw;
+      color: white;
+      font-size: 7.75vh;
+      font-family: VAG-Rounded-Std-Thin;
+      text-shadow: 1px 1px 2px black; 
     }
   </style>
+
   <script>
     var quoteNumber = 0;
     var quotePhrase = 0;
@@ -70,7 +89,12 @@
 </head>
 
 <body>
-  <div class="ad">Visit <span><strong>http://emdm.io</strong></span> to participate.</div>
+  <div class="ad">Visit
+    <span>http://emdm.io</span> to participate.
+  </div>
+  <div id="quote">
+    BREW
+  </div>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
-var result;
+var quotes;
 var compass;
 function preload() {
-  result = loadStrings('../data/brew_quotes.txt');
+  quotes = loadStrings('../data/brew_quotes.txt');
   compass = loadImage("../data/compass.png");
 }
 

@@ -1,9 +1,9 @@
 //pull upvoted quotes here
 
-var result;
+var quotes;
 var compass;
 function preload() {
-  result = loadStrings('../data/brew_quotes.txt');
+  quotes = loadStrings('../data/brew_quotes.txt');
   compass = loadImage("../data/compass4x.png");
 }
 
@@ -18,6 +18,12 @@ var n = 0;
 
 function draw() {
   background(h, s, l);
+  
+  var nstr = quotes[quoteNumber].replace("—", "<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—");
+  document.getElementById("quote").innerHTML=nstr;  
+  // console.log("WHYYY", document.getElementById("quote").innerHTML)
+
+  // console.log(quotes[quoteNumber])
   
   n = n + 0.1;
   translate(width, 0);
