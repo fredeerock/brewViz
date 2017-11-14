@@ -34,7 +34,8 @@
 
     .ad {
       position: absolute;
-      /* left: 1vh; */
+      left: 5vw;
+      /* text-align: center; */
       bottom: 0;
       font-family: VAG-Rounded-Std-Thin;
       font-size: 3.5vh;
@@ -46,14 +47,9 @@
     .ad span {
       font-family: VAG-Rounded-Std-Bold;
       text-decoration: underline;
-      /* background-color: black;
-      border-color: black;
-      padding-top: 15px;
-      padding-left: 15px;
-      padding-right: 15px; */
     }
-    
-    #quote{
+
+    #quote {
       position: absolute;
       top: 7vw;
       left: 5vw;
@@ -61,7 +57,17 @@
       color: white;
       font-size: 7.75vh;
       font-family: VAG-Rounded-Std-Thin;
-      text-shadow: 1px 1px 2px black; 
+      text-shadow: 1px 1px 2px black;
+    }
+
+    @keyframes blink {
+      50% {
+        text-shadow: 0 0 12px white;
+      }
+    }
+
+    .ad span {
+      animation: 4s infinite alternate blink;
     }
   </style>
 
