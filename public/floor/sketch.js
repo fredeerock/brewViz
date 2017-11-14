@@ -12,9 +12,9 @@ function setup() {
   imageMode(CENTER);
 }
 var t = 0;
-var w = 0;
-var pmcount = -1;
-var is = 100;
+// var w = 0;
+
+var is = 10;
 
 function draw() {
   // background(h, s, l);
@@ -23,9 +23,9 @@ function draw() {
   console.log(mcount, pmcount);
   
   if (mcount != pmcount) {  
-    is = 100; 
-    w++
-    console.log("BAANNGGG", w)
+    is = 10; 
+    // w++
+    // console.log("BAANNGGG", w)
     pmcount = mcount;
   } 
 

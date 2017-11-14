@@ -21,7 +21,8 @@
     var x = 0;
     var y = 0;
     var mcount = 0;
-    var socket = io.connect('http://localhost:3000');
+    var pmcount = -1;
+    var socket = io.connect(window.location.origin);
     socket.on('triggerPhrase', function (data) {
       quotePhrase = data.quotePhrase;
       quoteNumber = data.quoteNumber;
