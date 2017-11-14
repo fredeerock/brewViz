@@ -20,6 +20,7 @@
     var l = 25;
     var x = 0;
     var y = 0;
+    var mcount = 0;
     var socket = io.connect('http://localhost:3000');
     socket.on('triggerPhrase', function (data) {
       quotePhrase = data.quotePhrase;
@@ -29,6 +30,7 @@
       l = data.l;
       x = data.x;
       y = data.y;
+      mcount++;
       console.log(data);
       // socket.emit('my other event', { my: 'data' });
     });

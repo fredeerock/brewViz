@@ -4,7 +4,7 @@ var quotes;
 var compass;
 function preload() {
   quotes = loadStrings('../data/brew_quotes.txt');
-  compass = loadImage("../data/compass4x.png");
+  compass = loadImage("../data/compass.png");
 }
 
 function setup() {

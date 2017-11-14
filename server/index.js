@@ -18,7 +18,7 @@ io.on('connection', function (socket) {
       h:getRandomInt(0, 360), 
       s:getRandomInt(0, 100), 
       l:getRandomInt(0, 100)}) 
-  }, 1000);  
+  }, 5000);  
 });
 
 function getRandomInt(min, max) {
