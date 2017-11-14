@@ -7,9 +7,43 @@
   <script src="sketch.js"></script>
   <script src="/socket.io/socket.io.js"></script>
   <style>
+    @font-face {
+      font-family: VAG-Rounded-Std-Light;
+      src: url(../data/VAG-Rounded-Std-Light.ttf);
+    }
+
+    @font-face {
+      font-family: VAG-Rounded-Std-Thin;
+      src: url(../data/VAG-Rounded-Std-Thin.ttf);
+    }
+
     * {
       margin: 0;
       padding: 0;
+    }
+
+    .ad {
+      /* display: flex;
+      align-items: center;
+      justify-content: center; */
+      /* height: 100px; */
+      /* margin: auto; */
+      position: absolute;
+      /* top: 0; */
+      left: 1vh;
+      bottom: 0;
+      /* right: 0; */
+      font-family: VAG-Rounded-Std-Thin;
+      font-size: 4vh;
+      color: white;
+    }
+
+    .ad span{
+      background-color: black;
+      border-color: black;
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
   </style>
   <script>
@@ -36,6 +70,7 @@
 </head>
 
 <body>
+  <div class="ad">Visit <span><strong>http://emdm.io</strong></span> to participate.</div>
 </body>
 
 </html>
