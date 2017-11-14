@@ -12,6 +12,10 @@
       padding: 0;
     }
 
+    body {
+      overflow: hidden;
+    }
+
     @font-face {
       font-family: VAG-Rounded-Std-Light;
       src: url(../data/VAG-Rounded-Std-Light.ttf);
@@ -35,17 +39,17 @@
     #quote {
       position: absolute;
       top: 7vw;
-      left: 5vw;
+      left: 8vw;
       right: 5vw;
       color: white;
-      font-size: 7.75vh;
+      font-size: 7vh;
       font-family: VAG-Rounded-Std-Thin;
       text-shadow: 1px 1px 2px black;
     }
 
     .ad {
       position: absolute;
-      left: 5vw;
+      left: 8vw;
       /* text-align: center; */
       bottom: 0;
       font-family: VAG-Rounded-Std-Thin;
@@ -79,6 +83,8 @@
     var l = 25;
     var x = 0;
     var y = 0;
+    var mcount = 0;
+    var pmcount = -1;
     var socket = io.connect(window.location.origin);
     socket.on('triggerPhrase', function (data) {
       quotePhrase = data.quotePhrase;
@@ -88,6 +94,7 @@
       l = data.l;
       x = data.x;
       y = data.y;
+      mcount++;
       console.log(data);
       // socket.emit('my other event', { my: 'data' });
     });
